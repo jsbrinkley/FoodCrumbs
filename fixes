@@ -1,0 +1,44 @@
+#Helper replacement in GetRestaurantListHelper.rb
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+def self.get_points_for_routeboxer(mapsfromGoogleRoutes)
+  if(GoogleMap.get_geostop(mapsfromGoogleRoutes) != nil)
+    return GoogleMap.get_geostop(mapsfromGoogleRoutes)
+  end
+  return GoogleMap.get_direction(mapsfromGoogleRoutes)
+end
+
+# Changes to
+
+include GoogleMapsHelper
+
+def self.get_valid_hash(mapsfromGoogleRoutes)
+  if(GoogleMapsHelper.get_geostop(mapsFromGoogleRoutes) != nil)
+    return GoogleMapsHelper.get_geostop(mapsfromGoogleRoutes)
+  end
+  
+  return GoogleMapsHelper.get_direction(mapsfromGoogleRoutes)
+end
+
+
+#Changes in Controller
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+#Lines 25-49 Change to 
+
+#1. Get Hash of JSON's ( JSONS are actual hashes within the hash)
+jsonStr = GetRestaurantList.get_google_maps(params)
+
+# Check status
+if(GoogleMapsHelper.get_status(GoogleMapsHelper.get_valid_hash(jsonStr)) != ENV["MAPS_VALID_CODE"]
+  render json: jsonStr
+  return
+end
+
+arrayOfRouteLocations = GoogleMaps.get_route_points( GoogleMapsHelper.get_valid_hash(jsonStr) )
+
+@@@@@@@@@@@@@@@@@@@@@@@
+# IMPORTANT 
+@@@@@@@@@@@@@@@@@@@@@@@
+# If anywhere in you're calling GoogleMap. Methods, that is old code. The GoogleMaps module is my actual Module. Just letting you know. 

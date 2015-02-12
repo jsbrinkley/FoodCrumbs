@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  errorCode: 1
+  message: MyString
+  googleRoute: MyString
+  listOfRestaurants: MyString
+
+two:
+  errorCode: 1
+  message: MyString
+  googleRoute: MyString
+  listOfRestaurants: MyString

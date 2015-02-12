@@ -1,0 +1,7 @@
+class ApplicationController < ActionController::API
+  protected
+
+  def local_request?
+    false
+  end
+end

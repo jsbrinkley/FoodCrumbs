@@ -1,0 +1,8 @@
+module GetRestaurantListHelper
+
+  # Returns the full title on a per-page basis.
+  def d(params)
+    new_paths = "get_route_directions_json got executed"
+    return new_paths
+  end
+end

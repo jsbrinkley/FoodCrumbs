@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails UCSDFoodCrumbs: development" uuid="e82ff609-d9ac-4493-9698-1dd53bd8c43b">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails UCSDFoodCrumbs: test" uuid="6c053165-cf5b-4549-8fe5-8c594c244438">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails UCSDFoodCrumbs: production" uuid="7e5727c3-01cd-4a27-8148-b81681ac7f13">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails UCSDFoodCrumbs: cucumber" uuid="b84af951-c0c9-4cf5-9029-83da26b2ccf9">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>

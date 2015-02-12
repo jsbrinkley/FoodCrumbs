@@ -1,0 +1,27 @@
+== README
+DOCUMENTATION/API DOCUMENTATION: https://docs.google.com/document/d/1W4Esn8K2ndAbggsvCBCh-cg4uZXLyfYOL_V-K04nKmY/edit
+
+Ruby version: 2.1.1
+
+How to set up:
+1) Install PHP 5.4+ on the server
+
+2) Run bundle update
+
+3) Migrate with rake:db migrate
+
+4) Run bundle exec rackup config.ru for server
+
+Keep running after ssh:
+
+screen bundle exec rackup config.ru
+
+Detach:
+
+Control + A + D
+
+Reattach 
+
+screen -r
+
+Current version of the server running at: http://192.241.180.205:9292/
